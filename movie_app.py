@@ -85,13 +85,18 @@ class MovieApp:
         median_rating = sorted(ratings)[len(ratings) // 2] if len(ratings) % 2 == 1 else \
             (sorted(ratings)[len(ratings) // 2 - 1] + sorted(ratings)[len(ratings) // 2]) / 2
 
-        best_movie = max(movies.items(), key=lambda x: x[1]['rating'])
-        worst_movie = min(movies.items(), key=lambda x: x[1]['rating'])
+        if len(movies) == 1:
+            title, details = list(movies.items())[0]
+            print(f"There is 1 movie in the library: ")
+            print(f"Movie: {title} ({details['year']}), Rating: {details['rating']:.2f}")
+        else:
+            best_movie = max(movies.items(), key=lambda x: x[1]['rating'])
+            worst_movie = min(movies.items(), key=lambda x: x[1]['rating'])
 
-        print(f"Average rating: {average_rating:.2f}")
-        print(f"Median rating: {median_rating:.2f}")
-        print(f"Best movie: {best_movie[0]} ({best_movie[1]['year']}), Rating: {best_movie[1]['rating']}")
-        print(f"Worst movie: {worst_movie[0]} ({worst_movie[1]['year']}), Rating: {worst_movie[1]['rating']}")
+            print(f"Average rating: {average_rating:.2f}")
+            print(f"Median rating: {median_rating:.2f}")
+            print(f"Best movie: {best_movie[0]} ({best_movie[1]['year']}), Rating: {best_movie[1]['rating']}")
+            print(f"Worst movie: {worst_movie[0]} ({worst_movie[1]['year']}), Rating: {worst_movie[1]['rating']}")
 
     def _command_add_movie(self):
         """Add a new movie to the storage."""
