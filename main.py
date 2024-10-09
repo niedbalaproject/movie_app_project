@@ -13,10 +13,8 @@ def main():
     storage_type = input("Which storage type would you like to use? (json/csv): ").strip().lower()
 
     if storage_type == 'json':
-        # Create a StorageJson object
         storage = StorageJson('../movies.json')
     elif storage_type == 'csv':
-        # Create a StorageCsv object
         storage = StorageCsv('movies.csv')  # CSV storage
     else:
         print("Invalid storage type. Please enter 'json' or 'csv'.")
