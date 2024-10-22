@@ -35,6 +35,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;  /* Ensure movie is positioned relatively for absolute positioning of notes */
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .movie:hover {
@@ -71,7 +73,7 @@ body {
 }
 
 .country-flag {
-    width: 16px;
+    width: 12px;
     height: auto;
     margin-left: 5px;
     vertical-align: middle;  /* Aligns the flag vertically with the text */

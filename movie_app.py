@@ -80,18 +80,31 @@ class MovieApp:
             print("No movies in the storage.")
             return
 
-        ratings = [details['rating'] for details in movies.values()]
-        average_rating = sum(ratings) / len(ratings)
-        median_rating = sorted(ratings)[len(ratings) // 2] if len(ratings) % 2 == 1 else \
-            (sorted(ratings)[len(ratings) // 2 - 1] + sorted(ratings)[len(ratings) // 2]) / 2
+        total_movies = len(movies)
+        total_rating = 0.0
+        ratings = []  # To calculate the median
+
+        for details in movies.values():
+            rating = float(details['rating'])  # Convert rating to float
+            total_rating += rating
+            ratings.append(rating)  # Store rating for median calculation
+
+        average_rating = total_rating / total_movies
+
+        # Calculate median
+        ratings.sort()  # Sort ratings to find the median
+        if total_movies % 2 == 1:  # Odd number of ratings
+            median_rating = ratings[total_movies // 2]
+        else:  # Even number of ratings
+            median_rating = (ratings[total_movies // 2 - 1] + ratings[total_movies // 2]) / 2
 
         if len(movies) == 1:
             title, details = list(movies.items())[0]
             print(f"There is 1 movie in the library: ")
-            print(f"Movie: {title} ({details['year']}), Rating: {details['rating']:.2f}")
+            print(f"Movie: {title} ({details['year']}), Rating: {float(details['rating']):.2f}")
         else:
-            best_movie = max(movies.items(), key=lambda x: x[1]['rating'])
-            worst_movie = min(movies.items(), key=lambda x: x[1]['rating'])
+            best_movie = max(movies.items(), key=lambda x: float(x[1]['rating']))
+            worst_movie = min(movies.items(), key=lambda x: float(x[1]['rating']))
 
             print(f"Average rating: {average_rating:.2f}")
             print(f"Median rating: {median_rating:.2f}")
@@ -182,9 +195,15 @@ class MovieApp:
         """Display all movies sorted by rating."""
         movies = self._storage.list_movies()
 
-        sorted_movies = sorted(movies.items(), key=lambda x: (-x[1]['rating'], x[0]))
+        if not movies:
+            print("No movies in the library.")
+            return
+
+        sorted_movies = sorted(movies.items(), key=lambda x: (-float(x[1]['rating']), x[0]))
+        print("Movies sorted by rating: \n")
+
         for title, details in sorted_movies:
-            print(f"{title} ({details['year']}): {details['rating']}")
+            print(f"Movie: {title} ({details['year']}), Rating: {float(details['rating'])}")
 
     def _generate_website(self):
         """Generate an HTML page with the movie list."""

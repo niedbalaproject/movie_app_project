@@ -29,18 +29,19 @@ class StorageCsv(IStorage):
             with open(self.file_path, "r", newline='') as csvfile:
                 reader = csv.DictReader(csvfile)
 
-                # Print the fieldnames for debugging
-                print("Fieldnames:", reader.fieldnames)  # Check the field names
-
                 for row in reader:
                     # Ensure that row is indeed a dictionary
                     if isinstance(row, dict):
                         # Print the current row for debugging
-                        print("Row data:", row)  # Debug output
                         title = row['title']
 
+                        try:
+                            rating = float(row['rating'])
+                        except ValueError:
+                            rating = 0.0
+
                         movies[title] = {
-                            'rating': float(row['rating']),
+                            'rating': rating,
                             'year': row['year'],
                             'poster': row['poster'],
                             'imdb_link': row['imdb_link'],
