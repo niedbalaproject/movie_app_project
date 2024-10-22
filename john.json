@@ -1,0 +1,73 @@
+{
+    "The Shawshank Redemption": {
+        "year": "1994",
+        "rating": 9.3,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0111161/",
+        "country_code": "US"
+    },
+    "Titanic": {
+        "year": "1997",
+        "rating": 7.9,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0120338/",
+        "country_code": "US"
+    },
+    "Meet Joe Black": {
+        "year": "1998",
+        "rating": 7.2,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjVjNjAwYWItMDc0ZC00MTEwLWJiN2MtM2U4YThjNWE5YTZmXkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0119643/",
+        "country_code": "US"
+    },
+    "The Game": {
+        "year": "1997",
+        "rating": 7.7,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNGUzNzQwNmMtNzI3Mi00ZDIwLWJlM2ItMTA5N2Q2ZDMxMjJiXkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0119174/",
+        "country_code": "US"
+    },
+    "Race": {
+        "year": "2016",
+        "rating": 7.1,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTQ3MDM1MDU2NF5BMl5BanBnXkFtZTgwMzM3OTIzNzE@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt3499096/",
+        "country_code": "CA",
+        "notes": "On the list."
+    },
+    "The Godfather": {
+        "year": "1972",
+        "rating": 9.2,
+        "poster": "https://m.media-amazon.com/images/M/MV5BYTJkNGQyZDgtZDQ0NC00MDM0LWEzZWQtYzUzZDEwMDljZWNjXkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0068646/",
+        "country_code": "US"
+    },
+    "Fight Club": {
+        "year": "1999",
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0137523/",
+        "country_code": "DE"
+    },
+    "Interstellar": {
+        "year": "2014",
+        "rating": 8.7,
+        "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0816692/",
+        "country_code": "US"
+    },
+    "The Matrix": {
+        "year": "1999",
+        "rating": 8.7,
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt0133093/",
+        "country_code": "US"
+    },
+    "Whiplash": {
+        "year": "2014",
+        "rating": 8.5,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMmNkODhkYjctMDMyOC00ZTNjLTkwZTItM2ExMTAxMGU1ZGQ1XkEyXkFqcGc@._V1_SX300.jpg",
+        "imdb_link": "https://www.imdb.com/title/tt2582802/",
+        "country_code": "US"
+    }
+}
